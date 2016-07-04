@@ -23,14 +23,14 @@ import org.junit.runner.RunWith;
 
 import static io.fabric8.kubernetes.assertions.Assertions.assertThat;
 
-@RunWith(Arquillian.class)
-public class KubernetesIntegrationKT {
+    @RunWith(Arquillian.class)
+    public class KubernetesIntegrationKT {
 
-    @ArquillianResource
-    KubernetesClient client;
+        @ArquillianResource
+        KubernetesClient client;
 
-    @Test
-    public void testAppProvisionsRunningPods() throws Exception {
-        assertThat(client).deployments().pods().isPodReadyForPeriod();
+        @Test
+        public void testAppProvisionsRunningPods() throws Exception {
+            assertThat(client).deployments().pods().isPodReadyForPeriod();
+        }
     }
-}

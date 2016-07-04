@@ -38,33 +38,7 @@
     <!-- configure the versions you want to use here -->
     <camel.version>2.17.2</camel.version>
     <weld.version>2.3.3.Final</weld.version>
-<!--
-    <fabric8.version>2.2.136</fabric8.version>
--->
-    <fabric8.version>2.3-SNAPSHOT</fabric8.version>
-
-
-    <!-- Docker & Fabric8 Configs -->
-    <!--
-    <docker.from>fabric8/s2i-java:1.2</docker.from>
-    <fabric8.dockerUser>fabric8/</fabric8.dockerUser>
-    <docker.image>${fabric8.dockerUser}${project.artifactId}:${project.version}</docker.image>
-    <docker.port.container.jolokia>8778</docker.port.container.jolokia>
-
-      Start Prometheus metrics stuff.
-
-      This headless service is used to collect application level metrics
-      for ingestion into Prometheus.
-    <fabric8.service.name>${project.artifactId}</fabric8.service.name>
-    <fabric8.service.headless>true</fabric8.service.headless>
-
-    <fabric8.metrics.scrape>true</fabric8.metrics.scrape>
-    <fabric8.metrics.port>9779</fabric8.metrics.port>
-    <fabric8.metrics.scheme>http</fabric8.metrics.scheme>
-
-    <fabric8.label.group>quickstarts</fabric8.label.group>
-    <fabric8.iconRef>camel</fabric8.iconRef>
-    -->
+    <fabric8.version>2.2.139</fabric8.version>
   </properties>
 
   <dependencyManagement>
