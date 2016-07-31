@@ -37,7 +37,7 @@
     <fabric8.version>2.2.144</fabric8.version>
 
     <!-- maven plugin versions -->
-    <fabric8.maven.plugin.version>3.1.1</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.1.4</fabric8.maven.plugin.version>
     <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
     <exec-maven-plugin.version>1.4.0</exec-maven-plugin.version>
@@ -165,10 +165,14 @@
         <artifactId>fabric8-maven-plugin</artifactId>
         <version>${fabric8.maven.plugin.version}</version>
         <configuration>
-          <customizer>
-            <spring.boot.name>%g/%a:%l</spring.boot.name>
-            <java.app.mainClass>org.apache.camel.cdi.Main</java.app.mainClass>
-          </customizer>
+          <generator>
+            <config>
+              <java-exec>
+                <name>%g/%a:%l</name>
+                <mainClass>org.apache.camel.cdi.Main</mainClass>
+              </java-exec>
+            </config>
+          </generator>
         </configuration>
         <executions>
           <execution>
