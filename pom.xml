@@ -172,6 +172,32 @@
               </java-exec>
             </config>
           </generator>
+          <resources>
+            <labels>
+              <pod>
+                <property>
+                  <name>com.company</name>
+                  <value>Red_Hat</value>
+                </property>
+                <property>
+                  <name>rht.prod_name</name>
+                  <value>Red_Hat_Integration</value>
+                </property>
+                <property>
+                  <name>rht.prod_ver</name>
+                  <value>7.8</value>
+                </property>
+                <property>
+                  <name>rht.comp</name>
+                  <value>cdi-camel</value>
+                </property>
+                <property>
+                  <name>rht.comp_ver</name>
+                  <value>${fabric8.version}</value>
+                </property>
+              </pod>
+            </labels>
+          </resources>
         </configuration>
         <executions>
           <execution>
